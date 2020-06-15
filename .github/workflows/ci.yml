@@ -1,0 +1,10 @@
+name: CI
+
+
+jobs:
+  build:
+    steps:
+      - name: Build with Gradle
+        run: echo "$MULTILINE_VARIABLE"
+        env: # Or as an environment variable
+          MULTILINE_VARIABLE: ${{ secrets.MULTILINE_VARIABLE }}

